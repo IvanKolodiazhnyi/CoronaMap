@@ -13,7 +13,7 @@ interface MainMapFC {
   infoCovid: {
     country: string,
     timeline: {
-      "7/12/21": number,
+      "7/14/21": number,
     },
   }[]
 };
@@ -21,7 +21,7 @@ interface MainMapFC {
 interface OneEl {
   country: string | undefined,
   timeline: {
-    "7/12/21": number,
+    "7/14/21": number,
   },
 };
 
@@ -39,8 +39,18 @@ export const MainMap:React.FC<MainMapFC> = ({ setTitleContent, infoCovid }) => {
                   geography={geo}
                   onMouseEnter={() => {
                     const { NAME, ISO_A3 } = geo.properties;
-                    const findArr: OneEl | undefined = infoCovid.find(el => el.country === NAME || el.country === ISO_A3);
-                    const name = "7/12/21";
+                    const findArr: any = infoCovid.find(el => el.country === NAME || el.country === ISO_A3);
+                    let x;
+                    if(findArr !== undefined) {
+                      const { timeline } = findArr;
+                      x = timeline;
+                    };
+                      if(x !== undefined) {
+                        for(const key in x) {
+                          x = key;
+                        };
+                      }
+                    const name: any = x;
                     findArr?.country === undefined ? (
                       setTitleContent(`${NAME} - No inforamtion`)
                     ) : (

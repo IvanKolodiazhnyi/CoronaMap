@@ -1,5 +1,6 @@
 {
   "name": "my-app",
+  "homepage": "https://IvanKolodiazhnyi.github.io/CoronaMap",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +13,7 @@
     "@types/react-dom": "^17.0.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "gh-pages": "^3.2.3",
     "modern-normalize": "^1.1.0",
     "node-sass": "^6.0.1",
     "normalize.css": "^8.0.1",
@@ -28,7 +30,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
