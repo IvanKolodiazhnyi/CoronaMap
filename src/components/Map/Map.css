@@ -1,0 +1,12 @@
+.map_container {
+  width: 1080px;
+  height: 795px;
+}
+
+.map_status {
+  color: white;
+}
+
+body {
+  background-color: gray;
+}
