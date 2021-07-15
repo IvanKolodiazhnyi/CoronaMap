@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/Map/Map.css"],"names":[],"mappings":"AAAA,eACE,YAAa,CACb,YACF,CAEA,YACE,UACF,CAEA,KACE,qBACF","file":"main.fb62b302.chunk.css","sourcesContent":[".map_container {\n  width: 1080px;\n  height: 795px;\n}\n\n.map_status {\n  color: white;\n}\n\nbody {\n  background-color: gray;\n}\n"]}
